@@ -25,8 +25,8 @@ img {
   padding-left: 0;
 }
 
-ul>li {
-list-style: none;
+ul > li {
+  list-style: none;
 }
 
 a {
@@ -51,133 +51,118 @@ h6 {
   padding: 0;
 }
 
-button, input {
+button,
+input {
   outline: none;
   border: none;
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "aside main"
+    "aside main";
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 8rem 0rem;
+}
+
+.grid-init {
+  max-width: 144rem;
+  margin: auto;
+  padding: 3rem 2.4rem 4rem;
+}
+
+.header {
+  grid-area: header;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin: 0;
+  padding: 0 7rem 0 0;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9.2rem 0 0;
+}
+
+.header__nav a {
+  font-size: 2.4rem;
+}
+.header__nav a:not(:last-child) {
+  margin: 0 2.5rem 0 0;
+}
+
+.header__find {
+  margin: 0 3.9rem 0 0;
+  padding: 0 4rem 0 1rem;
+  width: 33rem;
+  height: 4.1rem;
+  background: rgba(255, 255, 255, 0.08) url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% right 1.5rem;
+  background-size: 2rem;
+  border-radius: 0.8rem;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #fff;
+}
+
+.header__find::placeholder {
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #fff;
+}
+
+.header__date {
+  margin: 0 8.7rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.header__hours {
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #fff;
+}
+
+.header__days {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #fff;
+}
+
+.header__personal {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.3rem solid #fff;
+  cursor: pointer;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.main {
+  grid-area: main;
+}
 
 @media (max-width: 108em) {
   html {
@@ -268,7 +253,3 @@ button, input {
     font-size: 4.4px;
   }
 }
-
-
-
-
